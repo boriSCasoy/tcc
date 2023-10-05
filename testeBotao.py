@@ -2,17 +2,21 @@ import RPi.GPIO as GPIO
 import time
 
 # Configurar a numeração dos pinos GPIO
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 
 # Configurar o pino do botão como entrada
-botao_pin = 16  # Substitua pelo número do pino GPIO que você está usando
-GPIO.setup(botao_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+botao_pin1 = 11
+botao_pin2= 13
+
+GPIO.setup(botao_pin1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(botao_pin2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 try:
     while True:
-        time.sleep(0.1)
+        time.sleep(0.01)
         # Ler o estado do botão
-        estado_botao = GPIO.input(botao_pin)
+        estado_botao1 = GPIO.input(botao_pin)
+        estado_botao2 = GPIO.input(botao_pin)
 
         # Verificar se o botão foi pressionado (estado == False)
         if estado_botao == False:
