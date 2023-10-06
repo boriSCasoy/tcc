@@ -2,24 +2,16 @@ import time
 i = 0
 
 try:
-    while i < 60:
-        time.sleep(0.5)
+    while i <= 100:
+        time.sleep(0.05)
         
         # Ler o estado do botão
         #estado_botao1 = GPIO.input(botao1_pin)
         #estado_botao2 = GPIO.input(botao2_pin)
-        estado_botao1 = 1
-        estado_botao2 = 0
+        botao1 = 1
+        botao2 = 0 # linha pra testar só no código
 
-        if estado_botao1:
-            print("Botão 1")
-        else
-        if estado_botao2:
-            print("Botão 2")
-        else print("2 off")
-
-
-        print (str(i)+"/60")
+        print(botao1, "      ", botao2)
         i+=1
 
 except KeyboardInterrupt:
