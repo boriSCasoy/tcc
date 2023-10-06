@@ -1,28 +1,33 @@
 import RPi.GPIO as GPIO
 import time
 
-# Configurar a numeração dos pinos GPIO
+
+# ordem física da placa (gpio.bcm)
 GPIO.setmode(GPIO.BOARD)
 
-# Configurar o pino do botão como entrada
-botao_pin1 = 11
-botao_pin2= 13
+# config dos botoes
+botao1_pin = 11
+botao2_pin= 13
 
-GPIO.setup(botao_pin1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(botao_pin2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(botao1_pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(botao2_pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+i = 0
 
 try:
-    while True:
+    while i < 1000:
         time.sleep(0.01)
+        
         # Ler o estado do botão
-        estado_botao1 = GPIO.input(botao_pin)
-        estado_botao2 = GPIO.input(botao_pin)
+        estado_botao1 = GPIO.input(botao1_pin)
+        estado_botao2 = GPIO.input(botao2_pin)
 
-        # Verificar se o botão foi pressionado (estado == False)
-        if estado_botao == False:
+        if estado_botao1 == True:
+            print("Botão pressionado")
+        elif estado_botao1 == True:
             print("Botão pressionado")
         else:
-            print("Botão solto")
+            print("Botões soltos")
+        print(i + )
 
 except KeyboardInterrupt:
     # Lidar com a interrupção do teclado (Ctrl+C)
