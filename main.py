@@ -70,3 +70,6 @@ finally:
 
     # Fecha o dispositivo SPI
     spi.close()
+
+
+#comment
