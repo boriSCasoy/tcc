@@ -40,7 +40,18 @@ try:
         
 except KeyboardInterrupt:
     # Lidar com a interrupção do teclado (Ctrl+C)
+<<<<<<< HEAD
+    pass
+
+#pamonha
+
+print("iahsdsa")
+=======
     GPIO.cleanup()  # Limpar as configurações GPIO ao sair
 
 
 asdasdasdasdas
+>>>>>>> 67f40b429fa1351342e22b68be6154d9a7b8550c
+
+
+!@#WASdaisdia!
