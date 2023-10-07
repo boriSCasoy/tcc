@@ -1,3 +1,4 @@
+from os import set_inheritable
 import spidev
 import time
 import RPi.GPIO as GPIO
@@ -77,4 +78,4 @@ finally:
 ```
 
 
-#commentandocomentandocomentandocomentando
+continue working on this set_inheritable
