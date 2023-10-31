@@ -21,7 +21,7 @@ GPIO.setmode(GPIO.BOARD)
 # Pin declararion
 DRDY_PIN  = 13
 START_PIN = 15
-CS_PIN    = 18
+CS_PIN    = 18 --- 24
 RESET_PIN = 16
 
 GPIO.setwarnings(False);
